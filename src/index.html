@@ -2,59 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
 
     <link rel="icon" href="devchallenges.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
     <link rel="stylesheet" href="style.scss" />
-
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Interior Consultant Master - Challenge</title>
   </head>
 
   <body>
-    <div class="grid-container">
+    <header>
+      <h1>This interior</h1>
+      <span class="material-icons"> menu </span>
+      <nav role="navigation">
+        <ul>
+          <li>Home</li>
+          <li>Collection</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
 
-      <header>
+    <div class="container">
+      <section class="sect-1">
+        <h1>Modern interior</h1>
+        <p>
+          A full-Service residential & <br />
+          commercial interior design and <br />
+          staging company offering <br />
+          professional organizing & <br />eco-services.
+        </p>
+        <p>
+          Read more <span class="material-icons arrow"> trending_flat </span>
+        </p>
+      </section>
 
-        <h1>This interior</h1>
+      <section class="sect-2">
+        <p>
+          <img class="illustration" src="photo1.png" alt="interior image" />
+        </p>
 
-        <nav role="navigation">
-          <ul>
-            <li>Home</li>
-            <li>Collection</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-
-      </header>
-
-        <section class="sec1">
-          <h1>Modern interior</h1>
-          <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
-          <p>Read more</p>
-        </section>
-
-        <section class="sect2">
-          <div class="container-img"></div>
-            <p><img src="photo1.png" alt="interior image"></p>
-          </div>
-
+        <div class="card-container">
           <div class="card">
-            <h1>Aliza Webber</h1>
-            <p><img src="photo2.png" alt="profil image"></p>
-            <h2>Designed in 2020 by Aliza Webber</h2>
-            <h3>Interior designer</h3>
+            <div class="wrapper">
+              <div class="content">
+                <div class="medaille">
+                  <p>
+                    <img src="photo2.png" />
+                  </p>
+                </div>
+                <div class="identite">
+                  <p>Aliza Webber</p>
+                  <p>Interior designer</p>
+                </div>
+                <h1 class="citation">
+                  Designed in 2020 by <br />
+                  Aliza Webber
+                </h1>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
+    </div>
 
     <footer role="contentinfo">
-      <p><a href="https://www.mecydev.com">MecyDev</a> <a href="https://devchallenges.io">@DevChallenges.io</a>
+      <p>
+        <a href="https://www.mecydev.com">MecyDev</a>
+        <a href="https://devchallenges.io">@DevChallenges.io</a>
       </p>
     </footer>
-
-  </div>
-
-</body>
-
+  </body>
 </html>
