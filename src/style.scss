@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@300;500;600;700&display=swap');
+
+$color-back: #181719;
+$font-1: "Lora", serif;
+$font-2: "Crimson Pro", serif;
+$font-3: "Montserrat", sans-serif;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "hd hd hd hd hd hd"
+      "s1 s1 s1 . . ."
+      "ci ci ci ci ci ci"
+      "ci ci ci ci ci ci"
+      "ci ci ci ci ci ci"
+      "ci ci ci ci ci ci"
+      "ci ci ci ci ci ci"
+      ". . . . . ."
+      ". . . . . ."
+      ". . . . . .";
+  }
+
+body {
+    background-color: $color-back;
+    color: #fff;
+}
+
+header {
+    grid-area: hd;
+    width: 100%;
+}
+
+.sect1 {
+    grid-area: s1;
+}
+
+.container_img {
+    grid-area: ci;
+}
