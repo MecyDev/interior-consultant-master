@@ -3,26 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-
+    <title>Interior Consultant Master - Challenge</title>
     <link rel="icon" href="/devchallenges.a27a9a75.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/style.97fcb138.css">
-    <title>Interior Consultant Master - Challenge</title>
+    <script src="/src.e31bb0bc.js" defer=""></script>
   <script src="/style.97fcb138.js"></script></head>
 
   <body>
     <header>
       <h1>This interior</h1>
-      <i class="material-icons"> menu </i>
-      <nav role="navigation">
-        <ul>
-          <li>Home</li>
-          <li>Collection</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <a href="#" id="menu-open" class="material-icons open"> menu </a>
+      <div id="menu" class="menu visible-none">
+        <a href="#" id="menu-close" class="material-icons close"> close </a>
+        <nav role="navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="container">
