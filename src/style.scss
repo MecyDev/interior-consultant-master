@@ -2,9 +2,20 @@
 
 $color-back: #181719;
 $color-grey: #828282;
+
 $font-1: "Lora", serif;
 $font-2: "Crimson Pro", serif;
 $font-3: "Montserrat", sans-serif;
+
+$breakpoint-tablet: 768px;
+
+@mixin media-min($_min-width) {
+  @media screen and (min-width: $_min-width) {
+    & {
+      @content;
+    }
+  }
+}
 
 html {
   background-color: $color-back;
@@ -25,9 +36,15 @@ html {
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 38px;
+    max-width: 1440px;
     margin: 10px auto;
     padding-left: 3.2%;
     padding-right: 3.2%;
+
+    @include media-min($breakpoint-tablet) {
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 33px;
+    }
 
     a,
     a:hover {
@@ -39,6 +56,10 @@ html {
       justify-content: space-between;
       align-items: center;
       height: 50px;
+
+      @include media-min($breakpoint-tablet) {
+        grid-column: 1 / span 12;
+      }
 
       h1 {
         width: 103px;
@@ -54,15 +75,13 @@ html {
         border: 1px solid #fff;
       }
 
-      .visible-none {
-        display: none;
+      #menu-open {
+        @include media-min($breakpoint-tablet) {
+          display: none;
+        }
       }
 
-      .visible {
-        display: visible;
-      }
-
-      .menu {
+      #menu {
         position: absolute;
         background-color: $color-back;
         opacity: 0.98;
@@ -72,12 +91,26 @@ html {
         top: 0;
         right: 0;
         padding: 33.24742vh 0 0 0;
+        display: none;
 
-        .close {
+        @include media-min($breakpoint-tablet) {
+          position: static;
+          background-color: none;
+          opacity: 1;
+          width: 72%;
+          height: 0;
+          padding: 0;
+          display: block;
+        }
+
+        #menu-close {
           position: absolute;
-          display: visible;
           top: 21px;
           right: 3.2%;
+
+          @include media-min($breakpoint-tablet) {
+            display: none;
+          }
         }
 
         nav {
@@ -93,6 +126,11 @@ html {
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+
+            @include media-min($breakpoint-tablet) {
+              height: 0;
+              flex-direction: row;
+            }
           }
 
           li:nth-child(1) {
@@ -112,6 +150,12 @@ html {
     .container {
       display: flex;
       flex-direction: column;
+
+      @include media-min($breakpoint-tablet) {
+        grid-column: 1 / span 12;
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
       .material-icons {
         position: absolute;
@@ -148,6 +192,11 @@ html {
         position: relative;
         margin-top: 31px;
 
+        @include media-min($breakpoint-tablet) {
+          width: 90%;
+          margin-top: 0;
+        }
+
         .illustration {
           width: 100%;
           height: auto;
@@ -157,6 +206,7 @@ html {
 
         .card-container {
           width: 300px;
+          height: 138px;
           position: absolute;
           right: 11px;
           bottom: -80.2403px;
@@ -246,6 +296,10 @@ html {
       margin: 100px auto 0 auto;
       padding-top: 10px;
       border-top: 1px solid #a9a9a9;
+
+      @include media-min($breakpoint-tablet) {
+        grid-column: 1 / span 12;
+      }
 
       p {
         font-family: $font-3;
